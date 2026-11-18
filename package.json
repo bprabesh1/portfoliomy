@@ -1,0 +1,15 @@
+{
+  "name": "prabesh-summit-journey",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prabesh - The Summit Journey: interactive mountain-climbing portfolio with admin panel",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "reset-admin": "node scripts/reset-admin.js",
+    "build:d1": "node scripts/build-d1-sql.js",
+    "deploy": "wrangler deploy"
+  }
+}

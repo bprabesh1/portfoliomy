@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Prabesh | The Summit Journey</title>
+  <meta name="description" content="Prabesh Bhusal - Software Developer & Network Administrator. Follow the climb from the foot of the mountain to the summit.">
+  <meta name="theme-color" content="#0b1b2e">
+  <meta property="og:title" content="Prabesh | The Summit Journey">
+  <meta property="og:description" content="My career is a mountain. Every achievement is another step towards the summit.">
+  <meta property="og:image" content="/assets/img/mountain.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1b2e'/%3E%3Cpath d='M8 50 26 20l9 14 6-9 15 25z' fill='%23f6c453'/%3E%3Cpath d='M26 20l4 7-4-2-4 2z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/img/portrait.webp" type="image/webp">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/hero.css">
+  <link rel="stylesheet" href="/css/journey.css">
+  <link rel="stylesheet" href="/css/sections.css">
+</head>
+<body>
+  <a class="skip-link" href="#journey">Skip to the journey</a>
+
+  <div id="loader" class="loader" role="status" aria-live="polite">
+    <div class="loader-mark"><svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><path d="M6 52 26 18l10 16 7-11 15 29z" fill="none" stroke="#f6c453" stroke-width="3" stroke-linejoin="round"/></svg></div>
+    <p>Preparing the climb&hellip;</p>
+    <div class="loader-bar"><i></i></div>
+  </div>
+
+  <!-- floating navigation -->
+  <header class="hud-nav" id="nav">
+    <a class="brand" href="#home" aria-label="Prabesh - home"><span class="brand-mark" aria-hidden="true">PB</span><span class="brand-name">Prabesh</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary"></nav>
+    <div class="nav-tools">
+      <div class="nav-progress" id="navProgress" hidden aria-live="off"><span class="np-ring"><i id="npRing"></i></span><span class="np-text"><b id="npPct">0%</b><small id="npLabel">Base camp</small></span></div>
+      <button class="btn-skip" id="skipBtn" type="button" title="Skip the climbing animation">Skip climb</button>
+      <a class="btn-resume" id="navResume" href="/resume?download=1" hidden>Resume</a>
+      <button class="nav-burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="nav-drawer" id="navDrawer" hidden>
+    <nav id="navDrawerLinks" aria-label="Mobile"></nav>
+    <div class="drawer-foot"><button class="btn-skip" id="skipBtn2" type="button">Skip climb</button><a class="btn-resume" id="navResume2" href="/resume?download=1" hidden>Download resume</a></div>
+  </div>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="heroName">
+      <div class="hero-left" aria-hidden="true"></div>
+      <div class="hero-right" aria-hidden="true"></div>
+      <div class="hero-photo"><img id="heroImg" src="/assets/img/portrait.webp" alt="Portrait of Prabesh" width="903" height="1574" fetchpriority="high"></div>
+
+      <div class="hero-copy">
+        <p class="hero-badge" id="heroBadge">Software Developer</p>
+        <h1 id="heroName" class="hero-name">PRABESH</h1>
+        <p class="hero-role" id="heroRole">Software Developer</p>
+        <p class="hero-line" id="heroLine">Climbing Beyond Limits.</p>
+        <p class="hero-sub" id="heroSub">Every step tells a story. Every achievement brings me closer to the top.</p>
+        <div class="hero-cta">
+          <button class="btn-pill" id="startBtn" type="button">START MY JOURNEY <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="btn-ghost" id="exploreBtn" type="button">EXPLORE MY ACHIEVEMENTS</button>
+        </div>
+        <p class="hero-hint"><span class="mouse" aria-hidden="true"><i></i></span> Scroll to climb</p>
+      </div>
+
+      <aside class="hero-panel" aria-label="At a glance">
+        <p class="hp-label"><i></i> BASED IN</p>
+        <p class="hp-value" id="heroLoc">Bhairahawa, Nepal</p>
+        <div class="hp-climb" id="heroClimb">
+          <img src="/assets/img/mountain.webp" alt="" width="1536" height="1024" loading="eager" decoding="async">
+          <svg viewBox="0 0 1536 1024" aria-hidden="true"><path id="heroRoute" d="" fill="none" stroke="#ff6a00" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 15"/></svg>
+        </div>
+        <ul class="hp-stats" id="heroStats"></ul>
+      </aside>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about" aria-labelledby="aboutTitle">
+      <div class="wrap about-grid">
+        <div class="about-intro reveal">
+          <p class="eyebrow">About</p>
+          <h2 id="aboutTitle" class="display">PRABESH</h2>
+          <p class="about-role" id="aboutRole">Software Developer</p>
+          <blockquote class="about-quote" id="aboutQuote"></blockquote>
+          <ul class="about-meta" id="aboutMeta"></ul>
+        </div>
+        <div class="about-cards" id="aboutCards"></div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY (pinned mountain) ============ -->
+    <section class="journey" id="journey" aria-label="The climb: education, training and experience">
+      <div class="journey-track" id="journeyTrack">
+        <div class="stage" id="stage">
+          <svg class="world" id="world" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="An illustrated mountain with one winding climbing route that passes every checkpoint up to the summit"></svg>
+          <div class="stage-vignette" aria-hidden="true"></div>
+          <div class="stage-wind" id="wind" aria-hidden="true"></div>
+          <div class="stage-fog" aria-hidden="true"></div>
+          
+          <!-- progress HUD -->
+          <aside class="hud" id="hud" aria-label="Journey progress">
+            <div class="hud-top">
+              <div class="alt"><b id="hudPct">0</b><span>%</span><small>of the mountain climbed</small></div>
+              <div class="hud-zone" id="hudZone">Base Camp</div>
+            </div>
+            <div class="hud-bar" aria-hidden="true"><i id="hudBar"></i></div>
+            <div class="hud-now"><small>Current checkpoint</small><b id="hudNow">&mdash;</b></div>
+            <div class="hud-count"><span><b id="hudDone">0</b> completed</span><span><b id="hudLeft">0</b> remaining</span></div>
+            <ol class="hud-dots" id="hudDots" aria-label="Quick checkpoint navigation"></ol>
+            <button class="hud-list-btn" id="listToggle" type="button">View as list</button>
+          </aside>
+
+          <!-- achievement unlocked notice -->
+          <div class="unlock" id="unlock" role="status" aria-live="polite" hidden>
+            <div class="unlock-art"><img src="/assets/img/checkpoint-scene.webp" alt="" width="1024" height="1536" loading="lazy"></div>
+            <div class="unlock-body">
+              <p class="unlock-kicker">&#9733; ACHIEVEMENT UNLOCKED!</p>
+              <h3 id="unlockTitle"></h3>
+              <p class="unlock-quote" id="unlockQuote"></p>
+              <button class="btn-gold" id="unlockBtn" type="button">EXPLORE ACHIEVEMENT</button>
+            </div>
+          </div>
+
+          <div class="intro-caption" id="introCaption" aria-live="polite" hidden></div>
+          <button class="intro-skip" id="introSkip" type="button" hidden>Skip intro &rsaquo;</button>
+          <p class="scroll-cue" id="scrollCue" aria-hidden="true">Keep scrolling to climb</p>
+
+          <!-- summit cinematic -->
+          <div class="finale" id="finale" aria-hidden="true">
+            <div class="fin-cam" id="finCam">
+              <div class="fin-img" id="finImg"></div>
+              <div class="fin-flag" id="finFlag"></div>
+              <div class="fin-rays" id="finRays"></div>
+              <div class="fin-clouds" id="finClouds"><i></i><i></i><i></i></div>
+              <div class="fin-flash" id="finFlash"></div>
+            </div>
+            <canvas class="fin-spark" id="finSpark"></canvas>
+            <div class="fin-cap" id="finCap"></div>
+            <div class="fin-end" id="finEnd">
+              <p class="fin-kicker">SUMMIT REACHED</p>
+              <h2 id="sumTitle">THE JOURNEY NEVER ENDS.</h2>
+              <p class="fin-quote" id="sumQuote"></p>
+              <p class="fin-name">PRABESH</p>
+              <p class="fin-roles" id="sumRoles"></p>
+              <div class="fin-actions">
+                <a class="btn-gold" id="finResume" href="/resume" target="_blank" rel="noopener" hidden>VIEW MY RESUME</a>
+                <a class="btn-glass" href="#projects">EXPLORE MY PROJECTS</a>
+                <a class="btn-glass" href="#contact">CONTACT ME</a>
+              </div>
+              <p class="fin-final" id="sumFinal"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- accessible / reduced-motion list alternative to the climb -->
+      <div class="journey-list wrap" id="journeyList" hidden>
+        <div class="jl-head"><h2 class="display sm">The Journey</h2><button class="btn-ghost-dark" id="climbToggle" type="button">Switch to climbing view</button></div>
+        <ol class="jl-items" id="jlItems"></ol>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATES ============ -->
+    <section class="certs" id="certificates" aria-labelledby="certTitle">
+      <div class="wrap">
+        <div class="sec-head reveal"><p class="eyebrow">Certificates</p><h2 id="certTitle" class="display sm">Proof of every step</h2><p class="sec-sub">Diplomas and professional training collected along the way.</p></div>
+        <div class="cert-grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects" id="projects" aria-labelledby="projTitle">
+      <svg class="ridge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70l120-30 90 40 130-60 150 70 110-40 160 50 140-80 130 70 120-30 150 60 130-50V120z" fill="currentColor"/></svg>
+      <div class="wrap">
+        <div class="sec-head reveal"><p class="eyebrow">Projects</p><h2 id="projTitle" class="display sm">Side trails worth exploring</h2><p class="sec-sub">Explore at your own pace &mdash; the main climb waits for you.</p></div>
+        <div class="proj-grid" id="projGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="skills" id="skills" aria-labelledby="skillTitle">
+      <div class="wrap">
+        <div class="sec-head reveal"><p class="eyebrow">Technical skills</p><h2 id="skillTitle" class="display sm">The gear I climb with</h2><p class="sec-sub">Technologies and practices grouped by the terrain they cover.</p></div>
+        <div class="skill-grid" id="skillGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="wrap contact-grid">
+        <div class="contact-intro reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contactTitle" class="display sm">LET&rsquo;S BUILD SOMETHING GREAT TOGETHER.</h2>
+          <p class="contact-text" id="contactText"></p>
+          <ul class="contact-links" id="contactLinks"></ul>
+          <a class="btn-gold" id="contactResume" href="/resume?download=1" hidden>DOWNLOAD RESUME</a>
+        </div>
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field"><label for="cName">Name</label><input id="cName" name="name" type="text" autocomplete="name" maxlength="80" required><p class="err" data-for="name"></p></div>
+          <div class="field"><label for="cEmail">Email</label><input id="cEmail" name="email" type="email" autocomplete="email" maxlength="254" required><p class="err" data-for="email"></p></div>
+          <div class="field"><label for="cSubject">Subject <span class="opt">(optional)</span></label><input id="cSubject" name="subject" type="text" maxlength="150"><p class="err" data-for="subject"></p></div>
+          <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" name="message" rows="5" maxlength="4000" required></textarea><p class="err" data-for="message"></p></div>
+          <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn-gold wide" id="cSubmit" type="submit">SEND MESSAGE</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap"><p class="foot-final" id="footFinal"></p><p class="foot-copy">&copy; <span id="year"></span> <span id="footName">Prabesh Bhusal</span>. All rights reserved.</p></div>
+  </footer>
+
+  <!-- achievement panel -->
+  <div class="panel-backdrop" id="panelBackdrop" hidden></div>
+  <aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle" tabindex="-1" hidden>
+    <button class="panel-close" id="panelClose" type="button" aria-label="Close achievement panel">&times;</button>
+    <div class="panel-art" id="panelArt"></div>
+    <div class="panel-body">
+      <p class="panel-num" id="panelNum"></p>
+      <h3 id="panelTitle"></h3>
+      <p class="panel-date" id="panelDate"></p>
+      <p class="panel-org" id="panelOrg"></p>
+      <p class="panel-desc" id="panelDesc"></p>
+      <div class="panel-skills" id="panelSkills"></div>
+      <blockquote class="panel-quote" id="panelQuote"></blockquote>
+    </div>
+    <div class="panel-nav"><button type="button" id="panelPrev" class="btn-glass">&larr; Previous</button><button type="button" id="panelNext" class="btn-glass">Next &rarr;</button></div>
+  </aside>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Certificate image"><button type="button" class="panel-close" id="lbClose" aria-label="Close image">&times;</button><img id="lbImg" alt=""></div>
+
+  <noscript><p style="position:fixed;inset:auto 0 0 0;background:#0b1b2e;color:#fff;padding:14px;text-align:center;z-index:99">This portfolio uses JavaScript for the interactive mountain climb. Prabesh &mdash; Software Developer, Bhairahawa, Nepal.</p></noscript>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

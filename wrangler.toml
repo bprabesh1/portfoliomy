@@ -1,0 +1,18 @@
+# Cloudflare Workers config (free plan). Only ONE line needs your input: database_id.
+name = "prabesh-portfolio"
+main = "worker/index.mjs"
+compatibility_date = "2025-06-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+# these paths run through the Worker; everything else is served straight from /public (free, unlimited)
+run_worker_first = ["/api/*", "/resume", "/uploads/*", "/prabeshadmin", "/prabeshadmin/*", "/admin", "/admin/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "portfolio"
+database_id = "PASTE-YOUR-D1-DATABASE-ID-HERE"
+
+[vars]
+TZ_OFFSET_MINUTES = "345"   # Nepal time, used for the daily traffic chart
