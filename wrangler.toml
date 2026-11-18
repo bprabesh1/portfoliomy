@@ -12,7 +12,7 @@ run_worker_first = ["/api/*", "/resume", "/uploads/*", "/prabeshadmin", "/prabes
 [[d1_databases]]
 binding = "DB"
 database_name = "portfolio"
-database_id = "PASTE-YOUR-D1-DATABASE-ID-HERE"
+database_id = "a283eb42-c990-4136-bac5-f4fd4d8d692c"
 
 [vars]
 TZ_OFFSET_MINUTES = "345"   # Nepal time, used for the daily traffic chart
